@@ -1,0 +1,13 @@
+[Unit]
+Description=hardTextScanner
+
+[Service]
+User=opc
+Environment="PATH=/home/opc/.nvm/versions/node/v13.13.0/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/opc/.local/bin:/home/opc/bin"
+Environment="PYTHONPATH=$PYTHONPATH:/home/opc/hardTextScanner"
+
+Type=forking
+ExecStart=/bin/bash -c "/usr/sbin/uwsgi --ini /home/opc/hardTextScanner/config/uwsgi.ini >> /home/opc/hardTextScanner/log/log.txt 2>&1 &"
+RemainAfterExit=no
+Restart=always
+RestartSec=5s

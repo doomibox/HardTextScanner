@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Result</title>
+    </head>
+    <body>
+    {% for item in items: %}
+        <h2>{{ item['word'] }}</h2>
+        <h3>score: {{ item['score'] }}</h3>
+        <h3>explanation: {{ item['explain'] }}</h3>
+        <br>
+    {% endfor %}
+    </body>
+</html>
