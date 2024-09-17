@@ -1,1 +1,4 @@
-curl -X POST -H "Content-Type: application/json" -d '{"payload":"some simple text"}' http://doomibox.ddns.net:1921/hardTextScan
+#echo "test_curlHardTextScan"
+#curl -X POST -H "Content-Type: application/json" -d '{"payload":"some simple text"}' http://doomibox.ddns.net:1921/hardTextScan
+echo "test_curlHardTextScanLlm"
+curl -X POST -H "Content-Type: application/json" -d '{"payload":"some simple text"}' http://doomibox.ddns.net:1921/hardTextScanLlm
